@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Treinando a IA — Plataformas de treinamento de IA</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18471013298"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18471013298');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -424,6 +432,39 @@
     <p class="foot-brand">© Treinando a IA · 2026</p>
   </div>
 </footer>
+
+<!-- Rastreamento de cliques de saída (Google Ads) -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18471013298/biPMCPCQiYMdELKX1edE',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dominiosParceiros = ['ai.hub.xyz', 'crowtado.com', 'app.claru.ai', 'www.crowtado.com'];
+  document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+    try {
+      var host = new URL(link.href).hostname;
+      if (dominiosParceiros.indexOf(host) !== -1) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          gtag_report_conversion(link.href);
+        });
+      }
+    } catch (err) {}
+  });
+});
+</script>
 
 </body>
 </html>
